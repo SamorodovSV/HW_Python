@@ -59,5 +59,3 @@
 # random.shuffle(list)
 # print(list)
 
-
-
