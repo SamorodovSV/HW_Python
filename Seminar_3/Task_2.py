@@ -8,7 +8,6 @@
 
 
 from random import randint
-import math
 
 def get_numbers(n, frst, last):
     return [randint(frst, last) for i in range(n)]
@@ -22,11 +21,7 @@ def pairs_mult(numbers):
     if len(numbers) ==1: results.append(numbers[0]**2)       
     return results
 
-n = 9
-frst = 1
-last = 10
-
-mylist = get_numbers(n, frst, last)
+mylist = get_numbers(9, 1, 10)
 print(mylist, end =' ')
 print(' => ',pairs_mult(mylist))
 
