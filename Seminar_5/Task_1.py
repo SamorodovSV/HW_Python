@@ -1,18 +1,10 @@
 # Напишите программу, удаляющую из текста все слова, содержащие ""абв"".
 
-with open('file.txt', 'r') as fin:
-   for line in fin:
-      file = line.split()
-      for word in file:
-         if 'абв' in word:
-            file.remove(word)
-      sentence = ' '.join(file)
-      print(sentence)
-# with open("file.txt", "r") as fin:
-#      for line in fin:
-#         file = line.split()
-#         for word in file:
-#             if "абв" in word:
-#                file.remove(word)
-#         sentence = " ".join(file)
-#         print(sentence)
+my_text = 'Привет, меня абв зовут зовабвут Сергей! абв Мнеабв Мне 43абв 34 абв года.'
+
+def del_some_words(my_text):
+    my_text = list(filter(lambda x: 'абв' not in x, my_text.split()))
+    return " ".join(my_text)
+
+my_text = del_some_words(my_text)
+print(my_text)
